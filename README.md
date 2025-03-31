@@ -11,8 +11,8 @@ This project implements a simple linear regression model using PyTorch. I’ll b
 # 1.Generating Synthetic Data
 The first step is to create synthetic data that follows a linear relationship. This data will be used to train and test the model
 
-python
-```
+
+```python
 import torch
 
 # Define the true parameters of the linear relationship
@@ -47,7 +47,7 @@ d. Train-test split: The data is split into 80% training (40 samples) and 20% te
 # 2. Defining the Model
 Next, I define the linear regression model by creating a custom class that inherits from PyTorch’s nn.Module.
 
-```
+```python
 from torch import nn
 
 class LinearRegressionModel(nn.Module):
@@ -73,7 +73,7 @@ c. forward method: Defines how input x is transformed into output. For linear re
 
 # 3. Training the Model
 Training involves optimizing the model’s parameters to minimize the error between its predictions and the true values.
-```
+```python
 # Set random seed for reproducibility
 torch.manual_seed(42)
 
@@ -127,8 +127,8 @@ d. **Training loop**:
  # 4. Evaluating the Model
 After training, I evaluate the model on the test data to assess its performance.
 
-python
-```
+
+```python
 # Set the model to evaluation mode
 model_0.eval()
 
@@ -147,8 +147,8 @@ d. Test loss: Measures how well the model performs on unseen data, giving insigh
 
 # 5. Saving the Model
 Finally, I save the trained model so it can be reused later without retraining. We only save state_dict of a model to avoid any complications to the model if used in another system. 
-python
-```
+
+```python
 from pathlib import Path
 
 # Define the save path
@@ -186,7 +186,7 @@ d. `torch.save`: Writes the state_dict to a `.pth` file, allowing the model to b
 
 # Loading a Saved Model
 If you already have a saved model file (e.g., Model_0.pth), you can load it instead of retraining. Here’s how:
-```
+```python
 # Instantiate the model
 model_saved = LinearRegressionModel()
 
