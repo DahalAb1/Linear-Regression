@@ -31,8 +31,7 @@ train_split = int(0.8 * len(X))  # 80% of 50 = 40
 X_train, y_train = X[:train_split], y[:train_split]  # First 40 samples
 X_test, y_test = X[train_split:], y[train_split:]    # Last 10 samples
 ```
-
-**Explanation:
+**Explanation:**
 
 a. `torch.arange`: Creates a tensor of evenly spaced values from 0 to 1 with a step size of 0.02. The .unsqueeze(dim=1) adds an extra dimension, making it a column vector (shape (50, 1) instead of (50,)), which is necessary for PyTorch’s matrix operations.
 
@@ -62,7 +61,7 @@ class LinearRegressionModel(nn.Module):
         return self.weights * x + self.bias
 ```
 
-**Explanation:
+**Explanation:**
 
 a. `nn.Module`: This is PyTorch’s base class for all neural networks. By subclassing it, we can leverage PyTorch’s built-in functionality like gradient computation.
 
@@ -163,7 +162,7 @@ print(f"Model saved to {MODEL_SAVE_PATH}")
 ```
 
 
-Explanation:
+**Explanation:**
 
 a. `Path` from `pathlib`: A convenient way to handle file paths across operating systems.
 b. `MODEL_PATH.mkdir`: Creates a "Model" directory if it doesn’t already exist. `parents=True` ensures nested directories are created if needed, and `exist_ok=True` prevents errors if the directory already exists.
