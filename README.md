@@ -111,16 +111,16 @@ for epoch in range(epochs):
 
 **Explanation:**
 
-a. **`torch.manual_seed(42)`**: Ensures the random initialization of weights and bias is reproducible across runs.
-b. **`nn.L1Loss`**: This loss function calculates the mean absolute error (MAE) between predictions and true values, which is straightforward and effective for regression tasks.
-c. **`torch.optim.SGD`**: Stochastic Gradient Descent adjusts the parameters (weights and bias) based on gradients. The learning rate (`lr=0.01`) controls the step size of these updates.
-d. **Training loop**:
-  i. **`model_0.train()`**: Activates training mode (not critical here but a good habit for models with layers like dropout).
-  ii. **Forward pass**: `y_trained = model_0(X_train)` computes predictions for the training data.
-  iii. **Loss**: Compares predictions (`y_trained`) to true values (`y_train`) using MAE.
-  iv. **`optimizer.zero_grad()`**: Clears old gradients to avoid interference from previous iterations.
-  v. **`loss.backward()`**: Computes the gradients of the loss with respect to weights and bias via backpropagation.
-  vi **`optimizer.step()`**: Updates the parameters using the gradients and the learning rate.
+a. **`torch.manual_seed(42)`**: Ensures the random initialization of weights and bias is reproducible across runs.  
+b. **`nn.L1Loss`**: This loss function calculates the mean absolute error (MAE) between predictions and true values, which is straightforward and effective for regression tasks.  
+c. **`torch.optim.SGD`**: Stochastic Gradient Descent adjusts the parameters (weights and bias) based on gradients. The learning rate (`lr=0.01`) controls the step size of these updates.  
+d. **Training loop**:  
+  i. **`model_0.train()`**: Activates training mode (not critical here but a good habit for models with layers like dropout).  
+  ii. **Forward pass**: `y_trained = model_0(X_train)` computes predictions for the training data.  
+  iii. **Loss**: Compares predictions (`y_trained`) to true values (`y_train`) using MAE.  
+  iv. **`optimizer.zero_grad()`**: Clears old gradients to avoid interference from previous iterations.  
+  v. **`loss.backward()`**: Computes the gradients of the loss with respect to weights and bias via backpropagation.  
+  vi **`optimizer.step()`**: Updates the parameters using the gradients and the learning rate.  
 
 
  # 4. Evaluating the Model
