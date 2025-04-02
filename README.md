@@ -171,7 +171,7 @@ d. `torch.save`: Writes the state_dict to a `.pth` file, allowing the model to b
 
 
 
-## ** How to run 
+## ** How to run **
 
 1. Clone the repo
 `git clone https://github.com/your-username/pytorch-simple-linear-regression.git`
