@@ -180,7 +180,7 @@ d. `torch.save`: Writes the state_dict to a `.pth` file, allowing the model to b
 `python MODEL_0.py`
 
 
-**NOTE : dependencies(matplotlib, numpy) and Python must be installed before running.
+**NOTE : dependencies(matplotlib, numpy) and Python must be installed before running.**
 
 
 # Loading a Saved Model
